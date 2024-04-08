@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[3266],{5026:e=>{e.exports=JSON.parse('{"permalink":"/solution-watsonx-governance/flight-logs/tags/log","page":1,"postsPerPage":1,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Flight Logs"}')}}]);

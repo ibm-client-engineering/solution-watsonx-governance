@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[500],{4401:s=>{s.exports=JSON.parse('{"label":"sprint","permalink":"/solution-watsonx-governance/flight-logs/tags/sprint","allTagsPath":"/solution-watsonx-governance/flight-logs/tags","count":1,"unlisted":false}')}}]);
