@@ -6,4 +6,67 @@ custom_edit_url: null
 
 # Entity Extraction
 
-What are the use cases we delivered for the engagement? Explain the use cases in detail.
+### Prompt Template
+- Prompt:`You are a Recruiter. You will be given a resume. Please extract the Location, Gender, Education, Top skills, Area of expertise. Please output the results for these 5 fields as a json. Do not output anything other than those five things.`
+
+### Few shot examples:
+- Input: 
+
+```Joe Oberon joberon@provider.net
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+(919) 555-2948 - 5728 Burnett Road Carrboro, NC 27561 - linkedin.com/joeoberon
+ 
+Summary of Qualifications  
+A manager and bookkeeper with over 14 years of experience in successfully managing 
+accounts and employees. Utilize strong interpersonal and communication skills to 
+motivate staff to increase efficiency and profit margin. Effectively set priorities in 
+order to meet operational deadlines and long-term goals while maintaining accuracy in 
+documentation, accounts and reports. 
+ 
+Experience 
+ 
+NATURAL FOODS, Raleigh, NC
+2011 - Present
+Manager/Bookkeeper 
+- Supervise a staff of 25 and act as a liaison between owners, employees and 
+clients by promoting open communication. 
+- Efficiently handle Accounts Payable/Receivable and expense control 
+procedures including reconciliation, purchase orders, inventory verification, 
+charge backs and daily bank deposits. 
+- Confidentially maintain human resources files and actions including W-2 
+withholdings, benefits and bi-weekly payroll processing. 
+ 
+DIVA HAIR SCHOOL, Wake Forest, NC
+2008 - 2011 
+Bookkeeper
+- Managed accounts payable/receivable and scheduled billing for a beauty 
+school with up to 100 students. 
+- Calculated and distributed bi-weekly payroll. 
+- Maintained inventory, tracked student hours, managed collections and 
+processed certifications.
+ 
+JAMES AND SONS, Davidson, NC
+2006 - 2008 
+Verification/Payables Clerk 
+- Verified and balanced invoices, cash receipts, billings, purchase orders, 
+inventory and bank accounts for a manufacturing company. 
+- Assisted Head Bookkeeper in processing Accounts Payable/Receivable. 
+ 
+UNIVERSAL BANK, Tar Creek, NC
+2003 - 2006
+Teller 
+- Processed and handled cash transactions and provided excellent customer service. 
+ 
+Education 
+WAKE COLLEGE, Raleigh, NC - Courses in Accounting and Management 
+ 
+Computer Skills 
+Proficient in Windows or Mac OS, Microsoft Office Suite, Peachtree, and QuickBooks.
+```
+- Output:
+```
+{"Location": "Carrboro, NC ", "Gender": "Male", "Education": "WAKE COLLEGE, Raleigh, NC ", "Top Skills": "Accounts Payable/Receivable, expense control, human resources, payroll processing, bookkeeping, inventory management, customer service ", "area of expertise": "Manager/Bookkeeper"}
+```
+
+## Reference
+- Resume Example Source: https://www.resumebuilder.com/resume-examples/sales-manager/
