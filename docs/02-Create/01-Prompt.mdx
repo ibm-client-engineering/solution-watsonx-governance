@@ -4,8 +4,17 @@ description: sample page
 custom_edit_url: null
 ---
 
-# Sample Page
+## Prompt Template
+- Set prompt variables. This step is necessary for model evaluation.
 
-Details regarding the technical solution. What did you do and how you did it.
+### Resume Summarization
+- Prompt `You will be given a resume. Please summarize the resume.`
+- Few shot examples: [Resume Summarization](https://ibm-client-engineering.github.io/solution-watsonx-governance/Use%20Cases/Summarization)
 
-i.e. Deployment, installment, upgrade, configuration, automation.
+### Entity Extraction
+- Prompt:`You are a Recruiter. You will be given a resume. Please extract the Location, Gender, Education, Top skills, Area of expertise. Please output the results for these 5 fields as a json. Do not output anything other than those five things.`
+- Few shot examples: [Entity Extraction](https://ibm-client-engineering.github.io/solution-watsonx-governance/Use%20Cases/Entity%20Extraction)
+
+### Email Generation
+- Prompt: ``
+- Few shot examples: [Email Generation](https://ibm-client-engineering.github.io/solution-watsonx-governance/Use%20Cases/Generation)
