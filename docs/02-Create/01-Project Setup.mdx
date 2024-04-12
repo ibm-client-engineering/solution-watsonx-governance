@@ -5,7 +5,28 @@ custom_edit_url: null
 ---
 
 ## Create an Inventory and an AI Use Case
-- Create Inventory
-    - In the [AI Use Case](https://dataplatform.cloud.ibm.com/aigov/modelinventory/aiusecases?context=wx) page, click "Manage Settings".
-- Add collaborators
+
+- Create an Inventory
+  - In the [AI Use Case](https://dataplatform.cloud.ibm.com/aigov/modelinventory/aiusecases?context=wx) page, click "Manage Settings". Under the Inventories tab, click on "New Inventory +" and place in COS bucket.
+- Add collaborators to your Inventory
+  - Once you've successfully created an Inventory, click on the 3 vertical dots to the right hand side of your new Inventory, and select "Set Collaborators." Add members if working with other people.
 - Create AI Use Case
+  - Once an Inventory is created, create a new AI Use Case, placing it in that new Inventory that you just created. Depending on what stage your project is in, assign the status accordingly. The AI Use Case is where you'll be able to track all of your AI assets throughout the project's lifecycle.
+- Add collaborators to your AI Use Case
+  - Click into your new AI Use Case and under the Access header, add members if working with other people.
+
+## Create a new Deployment Space
+
+- On the [watsonx hompage](https://dataplatform.cloud.ibm.com/wx/home?context=wx), under Deployment Spaces, click the + button. Under Deployment Stage, be sure to select "Production" if you'd like to be able to perform Drift Monitoring on your future models. The purpose of creating a deployment space to collaborate with stakeholders and deploy and manage your AI assets.
+
+## Create a Project in watsonx.ai
+
+- On the [watsonx hompage](https://dataplatform.cloud.ibm.com/wx/home?context=wx), under Projects, click the + button and enter a descriptive name.
+- Go under the Manage tab, then under the Services and Integration tab, click "Associate service +" and associate it with Watson Machine Learning.
+- Next, under the Assets tab, create a new asset by clicking the "New Asset +" button then clicking Prompt Lab. Utilize the information in the [Prompt Template tab](https://ibm-client-engineering.github.io/solution-watsonx-governance/Create/Prompt) to create Prompt Templates for Summarization, Extraction, and Email Generation.
+
+## Promote all of the prompt templates to deployment space and Deploy the prompts
+
+- To deploy a prompt, underneath the assets tabs on the right-hand side of your prompt templates, click the vertical 3 dots then click "Promote to space." Repeat this for all 3 prompt templates that you created.
+
+## Evaluate all of the prompts using the respective datasets in Box
