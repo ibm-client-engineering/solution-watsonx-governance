@@ -5,3 +5,45 @@ custom_edit_url: null
 ---
 
 # AutoAI Experimentation
+
+
+## Prerequisites
+- Create a Cloud Pak for Data Project
+
+## Create an AutoAI Experiment
+    - Upload training dataset (csv file)
+    - Select **Binary Classification** for Prediction Type
+    - Select **Hired** for Positive Class
+    - Click **Run Experiment**
+    
+    More advanced settings can be found in **Experiment Settings** (Ex: train/test split percentages)
+
+![](./Instruction-Screenshots/AutoAI.png)
+
+AutoAI experiments will take different lengths of time to run depending on the size of the training dataset and the models being trained. After AutoAI finishes running the experiment, it will provide a list of different models with algorithm, accuracy, enhancements, and build time information. 
+![](./Instruction-Screenshots/ExperimentResults.png)
+
+## Deploy an AutoAI Model
+- Select a model and you can save it to project. 
+- Once saved to project, then promote the model to space.
+![](./Instruction-Screenshots/ProjectAssetsPage.png)
+- When in space, deploy the model.
+![](./Instruction-Screenshots/Deploy.png)
+
+## Add to Watson OpenScale Dashboard for Monitoring
+- Go to Watson OpenScale 
+![](./Instruction-Screenshots/LaunchOpenScale.png)
+- Click **Add to Dashboard**
+![](./Instruction-Screenshots/AddToDashboard.png)
+- Select model deployment space. This is the deployment space that has the AutoAI Experiment.
+![](./Instruction-Screenshots/ModelDeployment.png)
+- Add new machine learning provider by filling out Machine learning provider name, description, and environment type. Production type is needed for Drift Monitoring.
+![](./Instruction-Screenshots/AddNewProvider.png)
+- Select the AutoAI model you deployed previously
+![](./Instruction-Screenshots/SelectModel.png)
+- Ensure the data type and algorithm type are correct
+![](./Instruction-Screenshots/ModelInformation.png)
+- Click **View Summary**
+- Ensure everything is accurate and select **Finish** 
+![](./Instruction-Screenshots/CompleteSetup.png)
+Now you have successfully created and deployed an AutoAI model that has been added to Watson OpenScale for monitoring.

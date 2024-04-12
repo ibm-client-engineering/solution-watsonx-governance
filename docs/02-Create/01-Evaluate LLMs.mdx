@@ -6,20 +6,34 @@ custom_edit_url: null
 
 # Evaluate Watsonx.ai models
 ## Prerequisites
-- Prompt Template setup
-
+- Create a watsonx.ai instance
 
 ## Instructions
-- In Watsonx project,...
+- Write a prompt in prompt lab.
+![](./Instruction-Screenshots/EmailGenerationPrompt.png)
+- Save as a prompt template.
+![](./Instruction-Screenshots/PromptTemplate.png)
+- Promote prompt to space
+![](./Instruction-Screenshots/EmailGenerationPrompteToSpace.png)
+- Deploy 
+![](./Instruction-Screenshots/PromptDeployment.png)
+- View in AI Factsheet and Track in AI Use Case
+![](./Instruction-Screenshots/AIFactsheet.png)
+- Evaluate using the payload and/or feedback datasets
 
 ## Metrics Interpretation
 - Extraction
     - ROUGE scores
+![](./Instruction-Screenshots/ResumeExtractionMetrics.png)
 - Generation
     - Readability score
     - HAP score
+![](./Instruction-Screenshots/EmailGenerationMetrics.png)
+
 - Summarization
     - ROUGE scores
+![](./Instruction-Screenshots/ResumeSummarizationMetrics.png)
+
 
 ## Reference: 
 - [Configuring generative AI quality evaluations](https://dataplatform.cloud.ibm.com/docs/content/wsj/model/wos-monitor-gen-quality.html?context=wx&audience=wdp#supported-generative-ai-quality-metrics)
