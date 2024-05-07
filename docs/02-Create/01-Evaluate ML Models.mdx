@@ -8,7 +8,7 @@ custom_edit_url: Evaluate-ML-Models
 - [Finished AutoAI Experimentation](./AutoAI%20Experimentation)
  
 ## Instructions
-### Configure Model Info
+### **Configure Model Info**
 - Click on your model Yonce you've added the model to OpenScale. Click the blue button “Actions” and select “Configure monitors”
 ![](./Instruction-Screenshots/ClassificationModelBeforeMonitorConfig.png)
 - You will see the following configuration view. Click “Edit” on the upper right hand corner for the "Training data" box.
@@ -25,7 +25,37 @@ custom_edit_url: Evaluate-ML-Models
 - You will see this summary view, click “Finish”
 ![](./Instruction-Screenshots/ClassificationModelSummary.png)
 
-### Configure Explainability Metrics
+### **Configure Explainability Metrics**
+-  After last step in Configure Model Info section, you will now see this view with the training data attached and the data labels specified.
+![](./Instruction-Screenshots/MLModelConfigureTrainingData.png)
+- We first configure Explanability. To configure monitoring metrics for explanability, on the left hand side panel, navigate to “General settings” under Explainability. Click on the "Edit" icon for "Explanation method" to start configuration.  
+![](./Instruction-Screenshots/MLModelExplanationConfig.png)
+- Explanation method: In our example, we will set the SHAP global explanation to “On” and select “SHAP” for Local explanation method. Click “Next”.
+![](./Instruction-Screenshots/MLModelExplanationMethodConfig.png)
+- We need to select Controllable features for explanability. Controllable features are features that can be changed and have a significant impact on your model outcomes. In our example, we set all features as controllable, and click “Save”
+![](./Instruction-Screenshots/MLModelExplanationControllableFeatures.png)
+- Once we selected "SHAP" for Explanation method, we will need to configure the SHAP tab. Navigate to the SHAP tab and click the "Edit" icon for "Common Settings" to start configuration.
+![](./Instruction-Screenshots/SHAPConfig.png)
+- Set the number of perturbations per record. In our example we use the default value 0. Click ”Save”. For more information about SHAP model, click here: [Configuring explainability in Watson OpenScale](https://dataplatform.cloud.ibm.com/docs/content/wsj/model/wos-explainability-config.html?context=cpdaas)
+![](./Instruction-Screenshots/SHAPCommonSettings.png)
 
-### Configure Evaluation Metrics (e.g. Fairness, Quality)
+### **Configure Evaluation Metrics (e.g. Fairness, Quality)**
+- To configure Fairness, navigate to the ”Fairness” tab under Evaluations. 
+    - Click “Edit” icon for "Configuration" to configure the metrics. Select “Configure manually” and click “Save”.  
+    ![](./Instruction-Screenshots/FairnessConfig.png)
+    - Next, click “Edit” icon for Favorable outcomes to configure. 
+    ![](./Instruction-Screenshots/FairnessFavorableOutcomes.png)
+    - Configure the Favorable outcomes by selecting the checkboxes according to the use case. In our example, “Hired” is the favorable outcome and “Not_Hired” is the unfavorable outcomes. Click “Save”.  
+    ![](./Instruction-Screenshots/SelectFavorableOutcomes.png)
+- Next, we configre "Sample Size". Click “Edit” icon for "Sample Size" to start configuration. 
+    ![](./Instruction-Screenshots/SampleSizeConfig.png)
+- Set the minimum sample size to a number equal or smaller than the testing data, in our example, we set it as 1000. Click “Save”.  
+![](./Instruction-Screenshots/SampleSizeConfig2.png)
+- Next, click “Edit” icon for "Metrics" to configure Metrics. 
+![](./Instruction-Screenshots/MetricsConfig.png)
+- Select metrics that you’d like to monitor. In our example, we additionally select “Statistical parity difference”. Click “Save”. 
+![](./Instruction-Screenshots/FairnessMonitoredMetrics.png)
+- We could then set the lower and upper threshold for fairness value. In our example, we use the default value. Click “Save” to finish the setup.  
+![](./Instruction-Screenshots/FairnessDisparateImpact.png)
+- For more information about Configuring fairness evaluations, click here: [Configuring fairness evaluations in Watson OpenScale](https://dataplatform.cloud.ibm.com/docs/content/wsj/model/wos-monitor-fairness.html?context=cpdaas&audience=wdp)
 
