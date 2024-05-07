@@ -6,9 +6,10 @@ custom_edit_url: Evaluate-ML-Models
 
 ## Prerequisites
 - [Finished AutoAI Experimentation](./AutoAI%20Experimentation)
- 
+## Agenda
+- [Configure Model Info](#configure-model-info)
 ## Instructions
-### **Configure Model Info**
+### **Configure Model Info**<a name="configure-model-info"></a>
 - Click on your model Yonce you've added the model to OpenScale. Click the blue button “Actions” and select “Configure monitors”
 ![](./Instruction-Screenshots/ClassificationModelBeforeMonitorConfig.png)
 - You will see the following configuration view. Click “Edit” on the upper right hand corner for the "Training data" box.
@@ -72,5 +73,12 @@ custom_edit_url: Evaluate-ML-Models
 - For more information about Configuring Quality Evaluations: [Configuring quality evaluations in Watson OpenScale](https://dataplatform.cloud.ibm.com/docs/content/wsj/model/wos-monitor-accuracy.html?context=cpdaas&audience=wdp)
 
 ### Evaluate now
-- One the configure monitor steps is completed, navigate back to the model summary page and click “Actions” button and select “Evaluate now”. A righthand side panel will appear to “Import test data”. Select “from CSV file” and select testing dataset file. In our example, the “test.csv” file. Click “Upload and Evaluate” to start the evaluation.
+- One the configure monitor steps is completed, navigate back to the model summary page and click “Actions” button and select “Evaluate now”. 
+![](./Instruction-Screenshots/EvaluateNow.png)
+- A righthand side panel will appear to “Import test data”. Select “from CSV file” and select testing dataset file. In our example, the “test.csv” file. Click “Upload and Evaluate” to start the evaluation.
+![](./Instruction-Screenshots/EvaluateNowImportTestData.png)
+- The right hand side panel will close and you will see this following view saying “Evaluation in progress”, wait a few minutes to view evaluation results.
+![](./Instruction-Screenshots/EvaluationInProgress.png)
+- After a few minutes, you will see the evaluation dashboard similar to the screenshot. You’ve finished configuring model governance for a classification model.
+![](./Instruction-Screenshots/EvaluationComplete.png)
 
