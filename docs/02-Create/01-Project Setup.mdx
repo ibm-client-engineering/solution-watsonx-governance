@@ -30,3 +30,20 @@ custom_edit_url: null
 - To deploy a prompt, underneath the assets tabs on the right-hand side of your prompt templates, click the vertical 3 dots then click "Promote to space." Repeat this for all 3 prompt templates that you created.
 
 ## Evaluate all of the prompts using the respective datasets in Box
+
+First, make sure to download the following zip file that holds all of the required datasets:
+
+- [Click to download datasets](./datasets/datasets.zip)
+  - To evaluate the Classification model, use the Classification train.csv file
+  - To evaluate the Extraction model, use the Resume_Extraction_example.csv file
+  - To perform drift evaluation on the Summarization model, use the Resume_Summarization_feedback_data_example.csv file and the Resume_Summarization_payload_data_example.csv
+
+If you're evaluating in watsonx.gov,
+
+- Navigate to the AI Use Case section, then click on the 3 vertical dots on the right-hand side on the model you'd like to evaluate, click the "Evaluate" button. Once a model is selected, click on the "Actions" button on the right-hand corner, navigate to the "Evaluate" button, then utilize the respective datasets.
+
+If you're evaluating in OpenScale,
+
+- Find the model that you'd like to evaluate by using the search bar, then click on the model. Once you're in the model, click on the "Actions" button on the right-hand corner and click evaluate.
+
+For more information on the metrics that populate once you evaluate a model, please refer to the [Evaluate LLMs](Evaluate%20LLMs) page and the [Evaluate ML Models](Evaluate%20ML%20Models) page.

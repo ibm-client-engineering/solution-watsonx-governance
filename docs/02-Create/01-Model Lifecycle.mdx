@@ -6,6 +6,39 @@ custom_edit_url: null
 
 # Model Lifecycle
 
-Details regarding the technical solution. What did you do and how you did it.
+## Table of Contents
 
-i.e. Deployment, installment, upgrade, configuration, automation.
+1. Deploy Model
+2. Track in AI Use Case
+3. Validate in Evaluation
+
+---
+
+## Deployment
+
+The deployment stage of a model is done after a model is prepared, developed, and reviewed. It involves deploying a model to a production environment where it can be used to make predictions on new data.
+
+1. To deploy a model in watsonx.gov, you'll need to first create and save a model as a Prompt Template.
+2. Next, in the assets page in your project, click on the 3 vertical dots to the right of the model, click on "deploy" which then places your model in the deployment space.
+3. In the deployment space, this is where all your deployed models lie.
+4. Also, once you click into a model in the Project space, you can track your model within AI Use Cases.
+
+---
+
+## Track
+
+The tracking stage of a model occurs before and after a model is deployed, that way, end users can track what stage a model is in. It can be in the develop, test, validate, and operate stages. You should continuously keep the model stage up to date according to what stage you believe it's in. It is critical to track a model for transparency reasons, risk management, auditing, and version control in regards to collaboration.
+
+1. To track a model, locate the model in the Project space under the Assets header, then click "Track" to track your model within AI Use Cases.
+2. It will ask you to set which stage the model is currently in, please select the stage according to what you believe the model stage to be in. Also, it will ask you to set risk level, please set accordingly as well.
+
+---
+
+## Validate
+
+Validate the performance of your model once you evaluate your models. In the evaluations, you will utilize the following [test datasets](./datasets/datasets.zip) and set specific configurations to better validate the performance of your specific model. Here are some helpful hints to understand configurations:
+
+- In general, all of the metrics available for all the models have a default threshold that tells the user where the model stands. For example, it might alert the end user if the ROUGE score is below 0.5 if the threshold is 0.5; according to your model, if you think 0.5 it too low or high of a threshold value, feel free to change this number.
+- For the classification model, there are many more configurations that would be beneficial to monitor:
+  - For fairness, it is critical to pay attention to categories like Race, Age, Religion, Sex and more, in order to be on top of unfair bias before it occurs.
+  - On a similar note, it is important to track quality for the classification model to maintain accuracy to prevent unfair bias.
