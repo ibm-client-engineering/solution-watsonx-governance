@@ -6,8 +6,13 @@ custom_edit_url: Evaluate-ML-Models
 
 ## Prerequisites
 - [Finished AutoAI Experimentation](./AutoAI%20Experimentation)
-## Agenda
-- [Configure Model Info](#configure-model-info)
+## High-level Steps
+1. [Configure Model Info](#configure-model-info)
+1. [Configure Explainability Metrics](#configure-explainability-metrics)
+1. [Configure Evaluation Metrics: Fairness](#configure-fairness-metrics)
+1. [Configure Evaluation Metrics: Quality](#configure-quality-metrics)
+1. [Start Evaluation](#evaluate-now)
+
 ## Instructions
 ### **Configure Model Info**<a name="configure-model-info"></a>
 - Click on your model Yonce you've added the model to OpenScale. Click the blue button “Actions” and select “Configure monitors”
@@ -26,7 +31,7 @@ custom_edit_url: Evaluate-ML-Models
 - You will see this summary view, click “Finish”
 ![](./Instruction-Screenshots/ClassificationModelSummary.png)
 
-### **Configure Explainability Metrics**
+### **Configure Explainability Metrics**<a name="configure-explainability-metrics"></a>
 -  After last step in Configure Model Info section, you will now see this view with the training data attached and the data labels specified.
 ![](./Instruction-Screenshots/MLModelConfigureTrainingData.png)
 - We first configure Explanability. To configure monitoring metrics for explanability, on the left hand side panel, navigate to “General settings” under Explainability. Click on the "Edit" icon for "Explanation method" to start configuration.  
@@ -41,7 +46,7 @@ custom_edit_url: Evaluate-ML-Models
 ![](./Instruction-Screenshots/SHAPCommonSettings.png)
 
 ### **Configure Evaluation Metrics (e.g. Fairness, Quality)**
-#### **Fairness**
+#### **Fairness**<a name="configure-fairness-metrics"></a>
 - To configure Fairness, navigate to the ”Fairness” tab under Evaluations. 
     - Click “Edit” icon for "Configuration" to configure the metrics. Select “Configure manually” and click “Save”.  
     ![](./Instruction-Screenshots/FairnessConfig.png)
@@ -60,7 +65,7 @@ custom_edit_url: Evaluate-ML-Models
 - We could then set the lower and upper threshold for fairness value. In our example, we use the default value. Click “Save” to finish the setup.  
 ![](./Instruction-Screenshots/FairnessDisparateImpact.png)
 - For more information about Configuring fairness evaluations, click here: [Configuring fairness evaluations in Watson OpenScale](https://dataplatform.cloud.ibm.com/docs/content/wsj/model/wos-monitor-fairness.html?context=cpdaas&audience=wdp)
-#### **Quality**
+#### **Quality**<a name="configure-quality-metrics"></a>
 - To configure **Quality**, navigate to the”Quality” tab under Evaluations. 
 ![](./Instruction-Screenshots/QualitySetupTab.png)
 - Click “Edit” icon for Quality thresholds to configure the metrics. 
@@ -72,7 +77,7 @@ custom_edit_url: Evaluate-ML-Models
 - For more information about quality metrics: [Configuring quality evaluations in watsonx.governance](https://dataplatform.cloud.ibm.com/docs/content/wsj/model/wos-monitor-accuracy.html?context=cpdaas%3Fcontext%3Drefinery)
 - For more information about Configuring Quality Evaluations: [Configuring quality evaluations in Watson OpenScale](https://dataplatform.cloud.ibm.com/docs/content/wsj/model/wos-monitor-accuracy.html?context=cpdaas&audience=wdp)
 
-### Evaluate now
+### Evaluate now<a name="evaluate-now"></a>
 - One the configure monitor steps is completed, navigate back to the model summary page and click “Actions” button and select “Evaluate now”. 
 ![](./Instruction-Screenshots/EvaluateNow.png)
 - A righthand side panel will appear to “Import test data”. Select “from CSV file” and select testing dataset file. In our example, the “test.csv” file. Click “Upload and Evaluate” to start the evaluation.
